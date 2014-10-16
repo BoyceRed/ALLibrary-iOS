@@ -183,6 +183,14 @@
     }
 }
 
+- (IBAction)showTableView:(id)sender {
+    ALViewController *table = [[ALViewController alloc] init];
+    [self presentViewController:table
+                       animated:YES
+                     completion: ^{
+                     }];
+}
+
 - (IBAction)login:(id)sender {
     NSMutableDictionary *param = [NSMutableDictionary new];
     [param setObject:@"yunda" forKey:@"type"];

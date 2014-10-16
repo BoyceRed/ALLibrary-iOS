@@ -85,13 +85,24 @@
                                     <action selector="crash:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aNx-7z-mh8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-fg-JXC">
+                                <rect key="frame" x="270" y="276" width="30" height="30"/>
+                                <state key="normal" title="表格">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showTableView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IeN-eU-elA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NVe-N0-68R" firstAttribute="centerX" secondItem="xFk-8X-W9i" secondAttribute="centerX" id="25k-t7-Uq1"/>
+                            <constraint firstItem="Pbo-fg-JXC" firstAttribute="top" secondItem="2id-Vw-EJs" secondAttribute="bottom" constant="2" id="6bx-Wo-yc0"/>
                             <constraint firstItem="sWZ-ao-6Sy" firstAttribute="leading" secondItem="2id-Vw-EJs" secondAttribute="leading" id="9D3-oO-bnY"/>
                             <constraint firstItem="zc3-jc-Jds" firstAttribute="centerX" secondItem="xFk-8X-W9i" secondAttribute="centerX" id="Bkb-NG-I9b"/>
                             <constraint firstItem="NVe-N0-68R" firstAttribute="top" secondItem="n3o-ft-A98" secondAttribute="bottom" constant="82" id="IOf-3h-cbB"/>
+                            <constraint firstItem="Pbo-fg-JXC" firstAttribute="leading" secondItem="2id-Vw-EJs" secondAttribute="leading" id="LQe-jB-H4O"/>
                             <constraint firstItem="zc3-jc-Jds" firstAttribute="top" secondItem="xFk-8X-W9i" secondAttribute="bottom" constant="8" symbolic="YES" id="OoN-6X-ddK"/>
                             <constraint firstItem="2id-Vw-EJs" firstAttribute="centerX" secondItem="B2W-y0-wNX" secondAttribute="centerX" id="XWl-Hm-Ptb"/>
                             <constraint firstItem="71K-g3-s7K" firstAttribute="leading" secondItem="sWZ-ao-6Sy" secondAttribute="leading" constant="7" id="YsW-ms-FNu"/>

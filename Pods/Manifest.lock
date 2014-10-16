@@ -1,4 +1,5 @@
 PODS:
+  - AEFDataSource (0.4.0)
   - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
@@ -30,6 +31,7 @@ PODS:
   - SVProgressHUD (1.0)
 
 DEPENDENCIES:
+  - AEFDataSource (= 0.4.0)
   - AFNetworking (= 2.4.1)
   - FMDB (>= 2.4)
   - NanoStore (= 2.7.7)
@@ -37,6 +39,7 @@ DEPENDENCIES:
   - SVProgressHUD (>= 1.0)
 
 SPEC CHECKSUMS:
+  AEFDataSource: 06c93d123c46837a6200aae1f49c331b30aef870
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
   NanoStore: f20a87ce80c6049a1d927bb1e6d2771686d11be0

@@ -10,6 +10,7 @@
 #import "UMSocialControllerService.h"
 #import "UMSocialShakeService.h"
 #import "KuaiDi.h"
+#import "ALViewController.h"
 @interface LoginViewController
 : BaseViewController <UIActionSheetDelegate, UMSocialUIDelegate,
 UMSocialShakeDelegate>

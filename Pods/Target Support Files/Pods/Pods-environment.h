@@ -6,6 +6,12 @@
 // project.
 
 
+// AEFDataSource
+#define COCOAPODS_POD_AVAILABLE_AEFDataSource
+#define COCOAPODS_VERSION_MAJOR_AEFDataSource 0
+#define COCOAPODS_VERSION_MINOR_AEFDataSource 4
+#define COCOAPODS_VERSION_PATCH_AEFDataSource 0
+
 // AFNetworking
 #define COCOAPODS_POD_AVAILABLE_AFNetworking
 #define COCOAPODS_VERSION_MAJOR_AFNetworking 2

@@ -33,6 +33,7 @@
 		CE48E3B319E7CE80004D8444 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE48E3B119E7CE80004D8444 /* LaunchScreen.xib */; };
 		CE48E3B419E7CE80004D8444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE48E3B219E7CE80004D8444 /* Main.storyboard */; };
 		CE48E3B619E7CFC9004D8444 /* APIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE48E3B519E7CFC9004D8444 /* APIConfig.m */; };
+		CE73995019EF72A000E5B49A /* ALTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE73994F19EF72A000E5B49A /* ALTableViewCell.m */; };
 		CE79DDC119EBD1DA0000A993 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = CE79DDBF19EBD1DA0000A993 /* dsym_upload.sh */; };
 		CE79DDC219EBD1DA0000A993 /* libCrittercism_v5_0_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79DDC019EBD1DA0000A993 /* libCrittercism_v5_0_4.a */; };
 		CE85D0D319EE0E4A00608116 /* query in Resources */ = {isa = PBXBuildFile; fileRef = CE85D0D219EE0E4A00608116 /* query */; };
@@ -69,6 +70,7 @@
 		CE8B5D1419ECFA7C00DB80F8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8B5D1319ECFA7C00DB80F8 /* libsqlite3.dylib */; };
 		CE8B5D1619ECFA9A00DB80F8 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8B5D1519ECFA9A00DB80F8 /* libstdc++.dylib */; };
 		CE8B5D1819ECFA9F00DB80F8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8B5D1719ECFA9F00DB80F8 /* libz.dylib */; };
+		CEB20E9919EF607100A1DC50 /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB20E9819EF607100A1DC50 /* ALViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,8 @@
 		CE48E3B119E7CE80004D8444 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		CE48E3B219E7CE80004D8444 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE48E3B519E7CFC9004D8444 /* APIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConfig.m; sourceTree = "<group>"; };
+		CE73994E19EF72A000E5B49A /* ALTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTableViewCell.h; sourceTree = "<group>"; };
+		CE73994F19EF72A000E5B49A /* ALTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTableViewCell.m; sourceTree = "<group>"; };
 		CE79DDBC19EBD1DA0000A993 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
 		CE79DDBD19EBD1DA0000A993 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
 		CE79DDBE19EBD1DA0000A993 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 		CE8B5D1519ECFA9A00DB80F8 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		CE8B5D1719ECFA9F00DB80F8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CE9F885219EBF93700525AF4 /* Crittercism.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Crittercism.xcconfig; sourceTree = "<group>"; };
+		CEB20E9719EF607100A1DC50 /* ALViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
+		CEB20E9819EF607100A1DC50 /* ALViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
 		F27B7178DA307695335E4CA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -355,6 +361,7 @@
 		941BF307196402280003559D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE73994D19EF728C00E5B49A /* TestTable */,
 				94301C59198DEE1B00BEBF9B /* Login */,
 			);
 			name = View;
@@ -442,7 +449,7 @@
 		94301C67198DEEF000BEBF9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE8B5BE619ECD53A00DB80F8 /* UMengSocial */,
+				CEB20E9619EF605300A1DC50 /* TestTableViewController */,
 				94301C68198DEF1100BEBF9B /* Login */,
 			);
 			name = Controller;
@@ -477,6 +484,15 @@
 			name = StoryBoard;
 			sourceTree = "<group>";
 		};
+		CE73994D19EF728C00E5B49A /* TestTable */ = {
+			isa = PBXGroup;
+			children = (
+				CE73994E19EF72A000E5B49A /* ALTableViewCell.h */,
+				CE73994F19EF72A000E5B49A /* ALTableViewCell.m */,
+			);
+			name = TestTable;
+			sourceTree = "<group>";
+		};
 		CE79DDBA19EBD1DA0000A993 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,13 +521,6 @@
 				CE85D0D219EE0E4A00608116 /* query */,
 			);
 			path = LocalServer;
-			sourceTree = "<group>";
-		};
-		CE8B5BE619ECD53A00DB80F8 /* UMengSocial */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = UMengSocial;
 			sourceTree = "<group>";
 		};
 		CE8B5C9E19ECF93A00DB80F8 /* UMSocial_Sdk_4.1 */ = {
@@ -651,6 +660,15 @@
 				CE8B5CEF19ECF93A00DB80F8 /* UMSocialYiXinHandler.h */,
 			);
 			path = YiXin;
+			sourceTree = "<group>";
+		};
+		CEB20E9619EF605300A1DC50 /* TestTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEB20E9719EF607100A1DC50 /* ALViewController.h */,
+				CEB20E9819EF607100A1DC50 /* ALViewController.m */,
+			);
+			name = TestTableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -794,6 +812,7 @@
 				94301C66198DEEA400BEBF9B /* UserEntity.m in Sources */,
 				CE48E3B619E7CFC9004D8444 /* APIConfig.m in Sources */,
 				94301C5F198DEE3A00BEBF9B /* LoginStorage.m in Sources */,
+				CE73995019EF72A000E5B49A /* ALTableViewCell.m in Sources */,
 				94301C63198DEE9300BEBF9B /* LoginHandler.m in Sources */,
 				941BF2C01963ABD50003559D /* AppDelegate.m in Sources */,
 				94301C6B198DEF1C00BEBF9B /* LoginViewController.m in Sources */,
@@ -808,6 +827,7 @@
 				CE85D0D819EE105A00608116 /* Data.m in Sources */,
 				94301C5C198DEE2700BEBF9B /* LoginView.m in Sources */,
 				941BF2F71963EEF60003559D /* UserDefaultsUtils.m in Sources */,
+				CEB20E9919EF607100A1DC50 /* ALViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
