@@ -85,24 +85,24 @@ self.tableView.dataSource = self.dataSource;
 ## 使用说明
 1.网络请求发送
 ```objetivce-c
-    NSMutableDictionary *param = [NSMutableDictionary new];
-    [param setObject:@"18012306580" forKey:@"telphone"];
-    
-    [[RTHttpClient defaultClient]
-     requestWithPath:[[APIConfig defaultConfig] getAPIURL:API_LOGIN]
-     method:RTHttpRequestGet
-     parameters:param
-     prepareExecute:^{}
-     
-     success:^(NSURLSessionDataTask *task, id responseObject) {
-         UserEntity *userEntity =
-         [UserEntity modelObjectWithDictionary:responseObject];
-         NSLog(@"responseObject: %@", userEntity);
-     }
-     
-     failure:^(NSURLSessionDataTask *task, NSError *error) {
-         NSLog(@"Error: %@", error);
-     }];
+NSMutableDictionary *param = [NSMutableDictionary new];
+[param setObject:@"yunda" forKey:@"type"];
+[param setObject:@"3100074176480" forKey:@"postid"];
+
+[[RTHttpClient manager]
+requestWithPath:[[APIConfig manager] getAPIURL:API_LOGIN]
+method:RTHttpRequestGet
+parameters:param
+prepareExecute: ^{}
+
+success: ^(NSURLSessionDataTask *task, id responseObject) {
+KuaiDi *kd = [KuaiDi modelObjectWithDictionary:responseObject];
+NSLog(@"response: %@", kd);
+}
+
+failure: ^(NSURLSessionDataTask *task, NSError *error) {
+NSLog(@"Error: %@", error);
+}];
 ```
 
 
