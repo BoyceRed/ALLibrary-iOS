@@ -34,6 +34,7 @@
 		CE48E3B419E7CE80004D8444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE48E3B219E7CE80004D8444 /* Main.storyboard */; };
 		CE48E3B619E7CFC9004D8444 /* APIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE48E3B519E7CFC9004D8444 /* APIConfig.m */; };
 		CE73995019EF72A000E5B49A /* ALTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE73994F19EF72A000E5B49A /* ALTableViewCell.m */; };
+		CE73995219EF779200E5B49A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CE73995119EF779200E5B49A /* README.md */; };
 		CE79DDC119EBD1DA0000A993 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = CE79DDBF19EBD1DA0000A993 /* dsym_upload.sh */; };
 		CE79DDC219EBD1DA0000A993 /* libCrittercism_v5_0_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79DDC019EBD1DA0000A993 /* libCrittercism_v5_0_4.a */; };
 		CE85D0D319EE0E4A00608116 /* query in Resources */ = {isa = PBXBuildFile; fileRef = CE85D0D219EE0E4A00608116 /* query */; };
@@ -124,6 +125,7 @@
 		CE48E3B519E7CFC9004D8444 /* APIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConfig.m; sourceTree = "<group>"; };
 		CE73994E19EF72A000E5B49A /* ALTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTableViewCell.h; sourceTree = "<group>"; };
 		CE73994F19EF72A000E5B49A /* ALTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTableViewCell.m; sourceTree = "<group>"; };
+		CE73995119EF779200E5B49A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE79DDBC19EBD1DA0000A993 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
 		CE79DDBD19EBD1DA0000A993 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
 		CE79DDBE19EBD1DA0000A993 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		941BF2A31963ABD50003559D = {
 			isa = PBXGroup;
 			children = (
+				CE73995119EF779200E5B49A /* README.md */,
 				CE85D0C919EE0A4700608116 /* LocalServer */,
 				CE79DDBA19EBD1DA0000A993 /* Common */,
 				941BF2B51963ABD50003559D /* ALLibrary-iOS */,
@@ -814,6 +817,7 @@
 				94301C5F198DEE3A00BEBF9B /* LoginStorage.m in Sources */,
 				CE73995019EF72A000E5B49A /* ALTableViewCell.m in Sources */,
 				94301C63198DEE9300BEBF9B /* LoginHandler.m in Sources */,
+				CE73995219EF779200E5B49A /* README.md in Sources */,
 				941BF2C01963ABD50003559D /* AppDelegate.m in Sources */,
 				94301C6B198DEF1C00BEBF9B /* LoginViewController.m in Sources */,
 				941BF2F31963BF980003559D /* RTJSONResponseSerializerWithData.m in Sources */,
