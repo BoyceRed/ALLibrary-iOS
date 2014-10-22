@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHPullRefreshTableViewController.h"
 
-@interface ALViewController : UIViewController <UITableViewDelegate>
+@interface ALViewController : XHPullRefreshTableViewController
 
 @property (nonatomic, strong) UITableView *m_tableview;
 
