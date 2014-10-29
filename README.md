@@ -3,6 +3,59 @@
 站在巨人的肩膀上，针对`RTALLibrary-ios`进行了扩展和修改，主要是针对自己使用的项目做一些优化。后续会慢慢添加需要的东西
 
 ## 更新日志
+`2014.10.29更新`
+
+添加了`RTSoapClient`，支持通过`AFNetWorking`发送`Soap`请求。修改请求体的字符串拼接
+```objective-c
+/**
+*  根据参数生成请求体
+*
+*  @param param  请求参数
+*  @param method 请求方法
+*
+*  @return 添加请求体
+*/
+- (NSString *)requestBody:(NSDictionary *)param method:(NSString *)method {
+NSMutableString *soapReq = [[NSMutableString alloc] init];
+[soapReq appendString:
+@"<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope "];
+[soapReq
+appendString:@"xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "];
+[soapReq appendString:@"xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" "];
+[soapReq appendString:
+@"xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" "];
+[soapReq appendFormat:@"xmlns=\"%@\"><soap:Body>", kSOAP_XMLNS_NAME];
+[soapReq appendFormat:@"<%@ xmlns=\"%@\">", method, kSOAP_XMLNS_NAME];
+NSArray *allkeys = [param allKeys];
+for (NSString *key in allkeys) {
+[soapReq appendFormat:@"<%@>%@</%@>", key, [param objectForKey:key], key];
+}
+[soapReq appendFormat:@"</%@>", method];
+[soapReq appendString:@"</soap:Body></soap:Envelope>"];
+
+return soapReq;
+}
+```
+调用示例：
+```objective-c 
+- (IBAction)queryProduct:(id)sender {
+NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+[param setObject:[NSNumber numberWithInt:3]
+forKey:kSOAP_PARAM_GETPROMOTIONSBYTIMESTAMP_COUNT];
+
+[[RTSoapClient manager] requestWithPath:kSOAP_URL_PRODUCT
+method:KSOAP_METHOD_GETPROMOTIONSBYTIMESTAMP
+parameters:param
+success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+NSLog(@"responseObject:\n%@", responseObject);
+}
+
+failure: ^(AFHTTPRequestOperation *operation, NSError *error) {}];
+}
+```
+
+
+
 `2014.10.16更新`
 
 由于下午要出外地，所以今天上午初步集成了`AEFDataSource`,这个框架是把`UITableView`的数据源封装起来，让我们可以很方便的使用表格，调用方式如下：

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define SERVER_AUTH_USERNAME @"xxc.test"
-#define SERVER_AUTH_PASSWORD @"jpRc`PlcT]Uj"
+#define SERVER_AUTH_PASSWORD @""
 
 /***************是否需要鉴权：1、需要 0、不需要***************/
 #define SERVER_AUTH_ISNEEDAUTH 0
@@ -24,6 +24,32 @@
 /***************SERVER API***************/
 //登录
 #define API_LOGIN @"query"
+
+//============================鉴权用户名和密码============================
+#define kAUTH_USERNAME @"epro"
+#define kAUTH_PASSWORD @""
+
+//============================NAMES============================
+#define kSOAP_XMLNS_NAME @"http://api.dealextreme.com/mobile/2010"
+
+//============================请求方法============================
+#define kSOAP_METHOD_AUTH @"Authenticate"
+#define KSOAP_METHOD_GETPROMOTIONSBYTIMESTAMP @"GetPromotionsByTimestamp"
+
+//============================接口地址============================
+#define kSOAP_URL_AUTH \
+@"https://api.dealextreme.com/mobilev2/developerservice.asmx"
+#define kSOAP_URL_PRODUCT \
+@"http://api.dealextreme.com/mobilev2/productservice.asmx"
+
+//============================参数键============================
+#define kSOAP_PARAM_AUTH_ACCOUNT @"account"
+#define kSOAP_PARAM_AUTH_PASSWORD @"password"
+#define kSOAP_PARAM_GETPROMOTIONSBYTIMESTAMP_COUNT @"count"
+#define kSOAP_RETURN_STATUS @"Status"
+
+//============================错误码============================
+#define kERROR_STATUS_SESSTION_TIME_OUT @"13"
 
 @interface APIConfig : NSObject
 

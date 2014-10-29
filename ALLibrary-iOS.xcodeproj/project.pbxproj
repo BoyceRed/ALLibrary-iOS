@@ -34,6 +34,9 @@
 		CE48E3B319E7CE80004D8444 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE48E3B119E7CE80004D8444 /* LaunchScreen.xib */; };
 		CE48E3B419E7CE80004D8444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE48E3B219E7CE80004D8444 /* Main.storyboard */; };
 		CE48E3B619E7CFC9004D8444 /* APIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE48E3B519E7CFC9004D8444 /* APIConfig.m */; };
+		CE59072C1A00774B00258965 /* RTSoapClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59072B1A00774B00258965 /* RTSoapClient.m */; };
+		CE5907321A00775A00258965 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59072F1A00775A00258965 /* Stack.m */; };
+		CE5907331A00775A00258965 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5907311A00775A00258965 /* XMLParser.m */; };
 		CE73995019EF72A000E5B49A /* ALTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE73994F19EF72A000E5B49A /* ALTableViewCell.m */; };
 		CE73995219EF779200E5B49A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CE73995119EF779200E5B49A /* README.md */; };
 		CE79DDC119EBD1DA0000A993 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = CE79DDBF19EBD1DA0000A993 /* dsym_upload.sh */; };
@@ -126,6 +129,12 @@
 		CE48E3B119E7CE80004D8444 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		CE48E3B219E7CE80004D8444 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE48E3B519E7CFC9004D8444 /* APIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConfig.m; sourceTree = "<group>"; };
+		CE59072A1A00774B00258965 /* RTSoapClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSoapClient.h; sourceTree = "<group>"; };
+		CE59072B1A00774B00258965 /* RTSoapClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSoapClient.m; sourceTree = "<group>"; };
+		CE59072E1A00775A00258965 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		CE59072F1A00775A00258965 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		CE5907301A00775A00258965 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		CE5907311A00775A00258965 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		CE73994E19EF72A000E5B49A /* ALTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTableViewCell.h; sourceTree = "<group>"; };
 		CE73994F19EF72A000E5B49A /* ALTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTableViewCell.m; sourceTree = "<group>"; };
 		CE73995119EF779200E5B49A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -336,6 +345,8 @@
 		941BF2EB1963BE040003559D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CE59072D1A00775000258965 /* XML */,
+				CE5907291A00774000258965 /* RTSoapClient */,
 				94D9FDA8196BEE0700086600 /* RTHttpClient */,
 				941BF2EC1963BE120003559D /* APIConfig.h */,
 				CE48E3B519E7CFC9004D8444 /* APIConfig.m */,
@@ -498,6 +509,26 @@
 				CE48E3B219E7CE80004D8444 /* Main.storyboard */,
 			);
 			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		CE5907291A00774000258965 /* RTSoapClient */ = {
+			isa = PBXGroup;
+			children = (
+				CE59072A1A00774B00258965 /* RTSoapClient.h */,
+				CE59072B1A00774B00258965 /* RTSoapClient.m */,
+			);
+			name = RTSoapClient;
+			sourceTree = "<group>";
+		};
+		CE59072D1A00775000258965 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				CE59072E1A00775A00258965 /* Stack.h */,
+				CE59072F1A00775A00258965 /* Stack.m */,
+				CE5907301A00775A00258965 /* XMLParser.h */,
+				CE5907311A00775A00258965 /* XMLParser.m */,
+			);
+			name = XML;
 			sourceTree = "<group>";
 		};
 		CE73994D19EF728C00E5B49A /* TestTable */ = {
@@ -716,7 +747,7 @@
 		941BF2A41963ABD50003559D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = zlycare;
 				TargetAttributes = {
 					941BF2AB1963ABD50003559D = {
@@ -836,10 +867,13 @@
 				94301C6B198DEF1C00BEBF9B /* LoginViewController.m in Sources */,
 				941BF2F31963BF980003559D /* RTJSONResponseSerializerWithData.m in Sources */,
 				941BF2BC1963ABD50003559D /* main.m in Sources */,
+				CE5907321A00775A00258965 /* Stack.m in Sources */,
 				941BF2E71963BC8F0003559D /* BaseHandler.m in Sources */,
+				CE5907331A00775A00258965 /* XMLParser.m in Sources */,
 				941BF3051963F9C80003559D /* BaseDao.m in Sources */,
 				941BF2FA1963EF110003559D /* AppUtils.m in Sources */,
 				CE85D0D919EE105A00608116 /* KuaiDi.m in Sources */,
+				CE59072C1A00774B00258965 /* RTSoapClient.m in Sources */,
 				941BF2E41963AD110003559D /* BaseEntity.m in Sources */,
 				941BF3021963F9BA0003559D /* RTDatabaseHelper.m in Sources */,
 				CE85D0D819EE105A00608116 /* Data.m in Sources */,
@@ -906,7 +940,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
