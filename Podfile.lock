@@ -21,6 +21,7 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - EGOTableViewPullRefreshAndLoadMore (1.0.4)
   - FMDB (2.4):
     - FMDB/standard
   - FMDB/common (2.4)
@@ -34,6 +35,7 @@ PODS:
 DEPENDENCIES:
   - AEFDataSource (= 0.4.0)
   - AFNetworking (= 2.4.1)
+  - EGOTableViewPullRefreshAndLoadMore (= 1.0.4)
   - FMDB (>= 2.4)
   - NanoStore (= 2.7.7)
   - Reachability (>= 3.1.1)
@@ -43,6 +45,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AEFDataSource: 06c93d123c46837a6200aae1f49c331b30aef870
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  EGOTableViewPullRefreshAndLoadMore: 1dcd0f78d7aa8dee28adf64891b627904be8cd71
   FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
   NanoStore: f20a87ce80c6049a1d927bb1e6d2771686d11be0
   Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
