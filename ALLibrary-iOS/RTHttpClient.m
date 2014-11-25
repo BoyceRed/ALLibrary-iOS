@@ -11,16 +11,15 @@
 #import "RTJSONResponseSerializerWithData.h"
 
 @interface RTHttpClient ()
-@property (nonatomic, strong) AFHTTPSessionManager *manager;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 @end
 
 @implementation RTHttpClient
 
 - (id)init {
     if (self = [super init]) {
-        self.manager = [AFHTTPSessionManager manager];
-        //请求参数序列化类型
-        self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        self.manager = [AFHTTPRequestOperationManager manager];
+        self.manager.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
         //响应结果序列化类型
         self.manager.responseSerializer =
         [RTJSONResponseSerializerWithData serializer];
@@ -54,7 +53,7 @@
  *  @param success 成功回调
  */
 - (void)localServerPath:(NSString *)url
-                success:(void (^)(NSURLSessionDataTask *, id))success {
+                success:(void (^)(AFHTTPRequestOperation *task, id))success {
     NSArray *urls = [url componentsSeparatedByString:@"/"];
     NSString *localPath = [urls lastObject];
     localPath = [[NSBundle mainBundle] pathForResource:localPath ofType:nil];
@@ -69,9 +68,18 @@
 - (void)requestWithPath:(NSString *)url
                  method:(NSInteger)method
              parameters:(id)parameters
+                success:(void (^)(AFHTTPRequestOperation *task, id responseObject))success
+                failure:(void (^)(AFHTTPRequestOperation *task, NSError *error))failure {
+    [self requestWithPath:url method:method parameters:parameters prepareExecute: ^{
+    } success:success failure:failure];
+}
+
+- (void)requestWithPath:(NSString *)url
+                 method:(NSInteger)method
+             parameters:(id)parameters
          prepareExecute:(PrepareExecuteBlock)prepareExecute
-                success:(void (^)(NSURLSessionDataTask *, id))success
-                failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+                success:(void (^)(AFHTTPRequestOperation *task, id))success
+                failure:(void (^)(AFHTTPRequestOperation *task, NSError *))failure {
     //请求的URL
     DLog(@"Request path:%@ and param: %@", url, parameters);
     
@@ -132,8 +140,8 @@
 
 - (void)requestWithPathInHEAD:(NSString *)url
                    parameters:(NSDictionary *)parameters
-                      success:(void (^)(NSURLSessionDataTask *task))success
-                      failure:(void (^)(NSURLSessionDataTask *task,
+                      success:(void (^)(AFHTTPRequestOperation *task))success
+                      failure:(void (^)(AFHTTPRequestOperation *task,
                                         NSError *error))failure {
     if ([self isConnectionAvailable]) {
         [self.manager HEAD:url

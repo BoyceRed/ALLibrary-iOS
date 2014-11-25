@@ -33,6 +33,21 @@ typedef void (^PrepareExecuteBlock)(void);
  *  @param path
  *  @param method     RESTFul请求类型
  *  @param parameters 请求参数
+ *  @param success    请求成功处理块
+ *  @param failure    请求失败处理块
+ */
+- (void)requestWithPath:(NSString *)url
+                 method:(NSInteger)method
+             parameters:(id)parameters
+                success:(void (^)(AFHTTPRequestOperation *task, id responseObject))success
+                failure:(void (^)(AFHTTPRequestOperation *task, NSError *error))failure;
+
+/**
+ *  HTTP请求（GET、POST、DELETE、PUT）
+ *
+ *  @param path
+ *  @param method     RESTFul请求类型
+ *  @param parameters 请求参数
  *  @param prepare    请求前预处理块
  *  @param success    请求成功处理块
  *  @param failure    请求失败处理块
@@ -41,8 +56,8 @@ typedef void (^PrepareExecuteBlock)(void);
                  method:(NSInteger)method
              parameters:(id)parameters
          prepareExecute:(PrepareExecuteBlock)prepare
-                success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+                success:(void (^)(AFHTTPRequestOperation *task, id responseObject))success
+                failure:(void (^)(AFHTTPRequestOperation *task, NSError *error))failure;
 
 /**
  *  HTTP请求（HEAD）
@@ -54,8 +69,8 @@ typedef void (^PrepareExecuteBlock)(void);
  */
 - (void)requestWithPathInHEAD:(NSString *)url
                    parameters:(NSDictionary *)parameters
-                      success:(void (^)(NSURLSessionDataTask *task))success
-                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+                      success:(void (^)(AFHTTPRequestOperation *task))success
+                      failure:(void (^)(AFHTTPRequestOperation *task, NSError *error))failure;
 
 //判断当前网络状态
 - (BOOL)isConnectionAvailable;
